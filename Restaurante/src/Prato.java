@@ -8,6 +8,11 @@ public class Prato {
         this.preco = preco;
     }
 
+    public Prato(String nome)
+    {
+        this.nome = nome;
+    }
+
     public void showPrato()
     {
 

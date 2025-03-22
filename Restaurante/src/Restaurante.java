@@ -9,7 +9,7 @@ public class Restaurante {
         this.pratosDisponiveis.add(prato);
     }
 
-    public void showPratos()
+    public void showPratosDisponiveis()
     {
         for (int i = 0; i < pratosDisponiveis.size(); i++)
         {

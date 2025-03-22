@@ -25,17 +25,51 @@ public class Main {
         int opcao = 0;
         while (running)
         {
-            System.out.println("(1): ");
+            System.out.println("(1) mostrar cardapio - (2) Adicionar prato - (3) Remover prato - (4) Mostrar valor do pedido - (5) Mostrar pedido - (0) Sair");
             opcao = scan.nextInt();
             System.out.println("\n");
 
             if (opcao == 1)
             {
-
+                restaurante.showPratosDisponiveis();
             }
+            else if (opcao == 2)
+            {
+                System.out.println("Nome do pedido: ")
+                String nomePrato = scan.next();
 
-            System.out.println("\n");
-            System.out.println("Preco total: " + pedido.getPrecoTotal() + "R$");
+                Prato ordemPrato = new Prato(nomePrato)
+
+                for (int i = 0; i < pratosDisponiveis.size(); i++)
+                {
+                    String currentPrato=  pratos.get(i)
+                    if(nomePrato.equalsIgnoreCase(currentPrato.getNome()))
+                    {
+                        ordemPrato.setPreco(currentPrato.getPreco)
+                        pedido.addPrato(ordemPrato)
+                    }
+                }
+            }
+            else if (opcao == 3)
+            {
+                System.out.println("Nome do pedido: ")
+                String nomePrato = scan.next();
+
+                pedido.removePrato(nomePrato);
+            }
+            else if (opcao == 4)
+            {
+                System.out.println("\n");
+                System.out.println("Preco total: " + pedido.getPrecoTotal() + "R$");        
+            }
+            else if (opcao == 5)
+            {
+                pedido.showPedido();
+            }
+            else
+            {
+                running = false;
+            }
         }
     }
 }
